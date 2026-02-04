@@ -22,16 +22,17 @@ export default function HomeScreen({ navigation }: Props) {
                     />
 
                     <MenuCard
-                        icon="settings-outline"
-                        label="Settings"
-                        onPress={() => { }}
+                        icon="calendar-outline"
+                        label="Public Holidays"
+                        onPress={() => navigation.navigate('Settings')}
                     />
 
                     <MenuCard
-                        icon="information-circle-outline"
-                        label="About"
-                        onPress={() => { }}
+                        icon="school-outline"
+                        label="Universities"
+                        onPress={() => navigation.navigate('About')}
                     />
+
 
                     <MenuCard
                         icon="log-out-outline"

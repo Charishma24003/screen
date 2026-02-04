@@ -41,3 +41,65 @@ app-example
 # generated native folders
 /ios
 /android
+
+
+
+Countries that DO work (commonly used & tested)
+
+You can safely use any of these in your app/demo:
+
+🌍 North America
+United States
+Canada
+Mexico
+
+🌍 Europe
+United Kingdom
+Germany
+France
+Italy
+Spain
+Netherlands
+Belgium
+Switzerland
+Austria
+Sweden
+Norway
+Denmark
+Finland
+Ireland
+Portugal
+Poland
+Czech Republic
+Hungary
+Greece
+
+🌍 Oceania
+Australia
+New Zealand
+
+🌍 Asia (LIMITED support)
+Japan
+South Korea
+Singapore
+Hong Kong
+
+🌍 South America
+Brazil
+Argentina
+Chile
+Colombia
+
+🌍 Africa
+South Africa
+
+❌ Countries that DO NOT work (important to know)
+These will not show holidays because they are not in the dataset:
+
+India 🇮🇳
+Pakistan
+Bangladesh
+Sri Lanka
+Nepal
+China
+Most Middle Eastern countries
