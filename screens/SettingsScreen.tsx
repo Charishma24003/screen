@@ -1,3 +1,5 @@
+// Public Holidays Screen using Holidays API
+
 import { useState } from 'react';
 import {
     ActivityIndicator,
