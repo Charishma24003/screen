@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "806539936295",
+    "project_id": "screen-c16ba",
+    "storage_bucket": "screen-c16ba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806539936295:android:04cd20caad9ba48d054402",
+        "android_client_info": {
+          "package_name": "com.saas360.screen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLmxN8LFcRGsvs45A0G4WQZL7useTsGpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

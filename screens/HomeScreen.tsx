@@ -1,20 +1,32 @@
 import { Ionicons } from '@expo/vector-icons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+import * as Device from 'expo-device';
+import * as Notifications from 'expo-notifications';
 
 import AppHeader from '../components/AppHeader';
 import ScreenContainer from '../components/ScreenContainer';
 import { RootStackParamList } from '../types/navigation';
 
+
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export default function HomeScreen({ navigation }: Props) {
+
+    useEffect(() => {
+        getDevicePushToken();
+    }, []);
+
+
     return (
         <View style={{ flex: 1 }}>
             <AppHeader title="Welcome, User 👋" />
 
             <ScreenContainer center>
                 <View style={styles.grid}>
+
                     <MenuCard
                         icon="person-circle-outline"
                         label="Profile"
@@ -33,7 +45,6 @@ export default function HomeScreen({ navigation }: Props) {
                         onPress={() => navigation.navigate('About')}
                     />
 
-
                     <MenuCard
                         icon="log-out-outline"
                         label="Logout"
@@ -45,6 +56,24 @@ export default function HomeScreen({ navigation }: Props) {
         </View>
     );
 }
+
+async function getDevicePushToken() {
+    if (!Device.isDevice) {
+        console.log('Must use a physical device');
+        return;
+    }
+
+    const { status } = await Notifications.requestPermissionsAsync();
+
+    if (status !== 'granted') {
+        console.log('Permission not granted');
+        return;
+    }
+
+    const tokenResponse = await Notifications.getExpoPushTokenAsync();
+    console.log('Expo Push Token:', tokenResponse.data);
+}
+
 
 /* 🔹 Reusable Menu Card */
 function MenuCard({
@@ -88,10 +117,7 @@ const styles = StyleSheet.create({
         padding: 20,
         alignItems: 'center',
         marginBottom: 16,
-        elevation: 3, // Android shadow
-        shadowColor: '#000', // iOS shadow
-        shadowOpacity: 0.1,
-        shadowRadius: 6,
+        elevation: 3,
     },
     cardText: {
         marginTop: 10,

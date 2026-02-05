@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-
+privateKey.json
 # Expo
 .expo/
 dist/
@@ -103,3 +103,6 @@ Sri Lanka
 Nepal
 China
 Most Middle Eastern countries
+
+
+ Expo Push Token: ExponentPushToken[Fvzl3XFiZlid1gbnMDUOqC]
